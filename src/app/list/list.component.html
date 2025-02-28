@@ -1,23 +1,33 @@
+<!-- Displaying a simple paragraph -->
 <p>list works!</p>
+
+<!-- Header for the section, indicating the content is about Irish presidents -->
 <h2>The presidents of ireland</h2>
 
+<!-- Unordered list (bulleted) to display the names and terms of Irish presidents -->
 <ul>
-<li *ngFor="let x of presidents">
-    {{x.name}}
-    {{x.term}}
-</li>
-
+    <!-- Looping through 'presidents' array, where each item is represented as 'x' -->
+    <li *ngFor="let x of presidents">
+        <!-- Displaying the name and term of each president -->
+        {{x.name}}
+        {{x.term}}
+    </li>
 </ul>
-<ol>
 
+<!-- Ordered list (numbered) for displaying presidents using an alternate loop -->
+<ol>
+    <!-- Loop using the 'for' directive to iterate over 'presidents' array, 'track' directive used for optimization -->
     @for(pres of presidents;track pres){
+        <!-- Display each 'pres' (president) in a list item -->
         <li>{{pres}}</li>
     }
 </ol>
 
+<!-- Unordered list (bulleted) again, but this time using a different loop structure -->
 <ul>
+    <!-- Looping over 'presidents2' array to display the names and terms of these presidents -->
     @for(pres of presidents2;track pres){
+        <!-- Displaying the name and term of each president from 'presidents2' -->
         <li>{{pres.name}},{{pres.term}}</li>
     }
-
 </ul>
