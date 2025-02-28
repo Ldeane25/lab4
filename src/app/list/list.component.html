@@ -1,0 +1,23 @@
+<p>list works!</p>
+<h2>The presidents of ireland</h2>
+
+<ul>
+<li *ngFor="let x of presidents">
+    {{x.name}}
+    {{x.term}}
+</li>
+
+</ul>
+<ol>
+
+    @for(pres of presidents;track pres){
+        <li>{{pres}}</li>
+    }
+</ol>
+
+<ul>
+    @for(pres of presidents2;track pres){
+        <li>{{pres.name}},{{pres.term}}</li>
+    }
+
+</ul>
